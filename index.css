@@ -1,0 +1,137 @@
+body {
+  background-color: #032b43;
+}
+
+* {
+  border: 0px;
+}
+.cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.taskcont {
+  background-color: #3f88c5;
+  border-radius: 10px;
+  width: 50%;
+
+  display: flex;
+  justify-content: space-around;
+  height: 75px;
+  align-items: center;
+}
+.taskcont input {
+  height: 40px;
+  margin: 12px;
+  border-radius: 10px;
+  width: 80%;
+  display: flex;
+  justify-self: center;
+  margin-left: 50px;
+  outline-style: none;
+}
+.fbtn {
+  display: flex;
+  height: 45px;
+  width: 45px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin-right: 10px;
+  font-size: xx-large;
+  box-shadow: 0 1px 5px rgba(48, 45, 45, 0.527);
+  transition: 0.3s;
+  background-color: #032b43;
+  color: white;
+}
+
+.fbtn:hover {
+  background-color: white;
+  color: #032b43;
+  transform: rotate(90deg);
+}
+.fbtn:active {
+  height: 40px;
+  width: 40px;
+  box-shadow: #2ba37b 0 3px 10px;
+}
+
+.tasktable {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  margin-top: 50px;
+  border: 0px solid red;
+}
+
+.mytasks {
+  background-color: #007ea7;
+  border-radius: 10px;
+  width: 40%;
+  height: 75px;
+  align-items: center;
+  color: white;
+  position: relative;
+  bottom: 100px;
+  z-index: -1;
+  opacity: 6%;
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  animation: myanim 1s ease alternate both;
+  box-shadow: 0 1px 2px black;
+}
+.mytasks p {
+  margin-left: 10px;
+}
+.paradone {
+  text-decoration: line-through;
+}
+.btn {
+  font-size: medium;
+  border-radius: 7px;
+  background: none;
+  padding: 6px;
+  color: white;
+  box-shadow: 0 1px 3px rgba(37, 37, 37, 0.479);
+  outline: none;
+  margin-right: 10px;
+  transition: 0.3s;
+  display: flex;
+}
+.btn:active {
+  color: black;
+}
+
+.hidden {
+  display: hide;
+}
+
+.done {
+  background-color: #05a791;
+}
+@keyframes myanim {
+  0% {
+    opacity: 3%;
+    z-index: -1;
+    bottom: 100px;
+    filter: blur(7px);
+    background-color: #093f6b;
+  }
+  100% {
+    opacity: 100%;
+    z-index: 1;
+    bottom: 0;
+    filter: blur(0px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .taskcont {
+    width: 100%;
+      }
+  .mytasks {
+    width: 100%;
+  }
+}
